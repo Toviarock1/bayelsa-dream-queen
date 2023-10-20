@@ -330,8 +330,8 @@ const Page = () => {
             Your entry code will be sent to you within 24hours.
           </p>
           <p className="text-center text-xl font-primary">
-            Note: Send The word "Successful" via WhatsApp and Sms to:
-            08139933334 to validate your registration.
+            Note: Send The word &quote;Successful&quote; via WhatsApp and Sms
+            to: 08139933334 to validate your registration.
           </p>
         </div>
       </Modal>
