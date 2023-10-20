@@ -275,7 +275,7 @@ const Page = () => {
         <div className="flex items-center">
           <div>
             <button onClick={() => step >= 1 && setstep(step - 1)}>
-              <Image src={back} width={27} />{" "}
+              <Image src={back} width={27} alt="img" />{" "}
             </button>{" "}
           </div>{" "}
           <div className="mx-auto">

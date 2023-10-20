@@ -38,7 +38,7 @@ export default function Home() {
             </button>
           </div>
           <div className="md:w-1/2 flex justify-center mt-4 md:mt-0">
-            <Image src={image2} />
+            <Image src={image2} alt="img" />
           </div>
         </div>
       </section>

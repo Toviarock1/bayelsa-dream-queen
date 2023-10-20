@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-[#290604] rounded-t-3xl mt-20">
       <div className="px-[1rem] px-24 pt-28">
         <div className="flex justify-center">
-          <Image src={logo} width={264} />
+          <Image src={logo} width={264} alt="img" />
         </div>
         <div className="flex justify-center text-white mt-2">
           <ul className="md:flex gap-3 p-0">
