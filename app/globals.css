@@ -1,27 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  /* border: 0.5px solid red; */
+  /* transition: all 2s; */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.custom-navbar {
+  background-color: #290604;
+}
+.custom-btn {
+  border-radius: 50px !important;
+  background: #bf9b30 !important;
+  color: #fff !important;
+  font-family: Poppins !important;
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: normal !important;
+  font-family: Poppins !important;
+}
+.poppins {
+  color: #fff;
+  font-family: Poppins !important;
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+}
+.poppins:hover {
+  font-weight: 800 !important;
+}
+.bg {
+  background-image: url("./../public/bg.png");
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  background-size: cover;
+}
+.aboutbg {
+  background-image: url("./../public/about.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 610px;
+}
+.indexbg {
+  background-image: url("./../public/newhero.png");
+  /* background-position: center; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 610px; */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.contactbg {
+  background-image: url("./../public/contact.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 610px;
 }

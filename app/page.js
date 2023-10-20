@@ -1,113 +1,143 @@
-import Image from 'next/image'
+"use client";
+
+import Image from "next/image";
+import hero from "./../public/hero.svg";
+import image2 from "./../public/image2.svg";
+import image3 from "./../public/marketing.png";
+import image4 from "./../public/image4.png";
+import image5 from "./../public/image5.png";
+import image6 from "./../public/image6.png";
+import partner1 from "./../public/partner1.svg";
+import partner2 from "./../public/partner2.svg";
+import partner3 from "./../public/partner3.svg";
+import partner4 from "./../public/partner4.svg";
+import partner5 from "./../public/partner5.svg";
+import partner6 from "./../public/partner6.svg";
+import Card from "./components/Card";
+import FaqDropDown from "./components/FaqDropDown";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <section className="px-[1rem] md:px-32 indexbg h-[900px]"></section>
+      <section className="px-[1rem] md:px-32 py-28 bg-[#290604] z-10 relative">
+        <div className="md:flex justify-center items-center">
+          <div className="md:w-1/2">
+            <h2 className="text-[#BF9B30] font-secondary text-8xl font-bold mb-6">
+              BDQ Brand.
+            </h2>
+            <p className="font-primary text-2xl font-light mb-5 text-white">
+              The Bayelsa Dream Queen is a prestigious Crown that goes beyond
+              physical beauty, the organization aim at helping young girls find
+              their true essence. We search for women that have a big heart
+              towards society, we believe in uplifting and giving a voice to
+              those who have the courage to stand out.
+            </p>
+            <button className="bg-black rounded-full text-white px-8 py-4">
+              Learn more
+            </button>
+          </div>
+          <div className="md:w-1/2 flex justify-center mt-4 md:mt-0">
+            <Image src={image2} />
+          </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+      </section>
+      <section className="px-[1rem] md:px-32 py-28 z-10 relative">
+        <div>
+          <h2 className="text-[#150A24] font-primary text-3xl font-bold mb-6 text-center">
+            WHAT WE DO
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+          <p className="font-primary text-xl font-light mb-5 text-black text-center">
+            The Bayelsa Dream Queen position has evolved from being the company
+            to formally represent international models only to now handling
+            Talents as a multinational B2B platform as a result of its
+            establishment
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-7">
+            <Card
+              image={image3}
+              text={"Digital Marketing"}
+              alt={"digital marketing"}
+            />
+            <Card
+              image={image4}
+              text={"Live Event Marketing"}
+              alt={"Live Event Marketing"}
+            />
+            <Card image={image5} text={"Pageant"} alt={"Pageant"} />
+            <Card image={image6} text={"Fashion Shows"} alt={"Fashion Shows"} />
+          </div>
+          <div className="text-center mt-5">
+            <button className="bg-[#BF9B30] text-white text-center py-3 px-10 rounded-full">
+              Know more
+            </button>
+          </div>
+        </div>
+      </section>
+      <section className="px-[1rem] md:px-32 bg-[#BF9B30] py-10 mt-2 md:flex justify-between">
+        <div>
+          <Image src={partner1} alt="partner 1" />
+        </div>
+        <div>
+          <Image src={partner2} alt="partner 1" />
+        </div>
+        <div>
+          <Image src={partner3} alt="partner 1" />
+        </div>
+        <div>
+          <Image src={partner4} alt="partner 1" />
+        </div>
+        <div>
+          <Image src={partner5} alt="partner 1" />
+        </div>
+        <div>
+          <Image src={partner6} alt="partner 1" />
+        </div>
+      </section>
+      <section className="px-[1rem] md:px-32 py-28 bg -mt-[184px] z-10 relative mt-2">
+        <div className="flex flex-col flex-col-reverse gap-2 md:flex-row justify-center items-center mt-20">
+          <div className="md:w-1/2">
+            <FaqDropDown />
+          </div>
+          <div className="md:w-1/2">
+            <p className="text-black font-primary text-base text-end font-light mb-5">
+              YOUR QUESTIONS ANSWERED
+            </p>
+            <h1 className="text-black font-secondary text-4xl font-semibold mb-6 text-end">
+              Common Questions
+            </h1>
+            <p className="font-primary text-base font-light mb-5 text-end">
+              A few more questions our members usually ask,
+              <br /> you might find them helpful or can also use the form below
+              to request yours.
+            </p>
+            <div className="flex justify-end">
+              <button className="bg-[#BF9B30] rounded-full text-white px-8 py-4 text-end">
+                Become A Contestant
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="px-[1rem] md:px-32 py-28 bg-[#290604] z-10 relative">
+        <div className="">
+          <div className="">
+            <h2 className="text-white text-center font-primary font-secondary text-xl md:text-2xl font-light mb-6">
+              If You Would Like To Submit Your Profile To Us For Consideration,
+              Please Send An Email To Contact@BayelsaDreamQueen.Com
+            </h2>
+            <p className="text-white text-center font-primary font-secondary text-base font-light mb-6">
+              A Brief statement of purpose – at least 300 words describing the
+              purpose and your plans to connect with us
+            </p>
+            <div className="flex justify-center">
+              <button className="bg-[#BF9B30] rounded-full text-white px-8 py-4 text-end">
+                GO FOR SUBMISSION
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-  )
+  );
 }
