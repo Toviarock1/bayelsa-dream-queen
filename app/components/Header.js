@@ -32,7 +32,8 @@ const Header = () => {
               variant="secondary"
               size="lg"
               active
-              className="h-14 w-44 custom-btn"
+              className="h-14 w-44 custom-btn flexs"
+              href="/register"
             >
               Register Now
             </Button>

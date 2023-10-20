@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./../../public/logo.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -11,9 +12,21 @@ const Footer = () => {
         </div>
         <div className="flex justify-center text-white mt-2">
           <ul className="md:flex gap-3 p-0">
-            <li>Home</li>
-            <li>Home</li>
-            <li>Home</li>
+            <li>
+              <Link href={"/"} className="no-underline text-white">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href={"/about"} className="no-underline text-white">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href={"/contact"} className="no-underline text-white">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="flex justify-center text-white mt-2">

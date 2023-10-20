@@ -37,8 +37,8 @@ const Page = () => {
     setImages([...e.target.files]);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
+    // e.preventDefault();
 
     var templateParams = {
       email: data.email,
@@ -78,19 +78,21 @@ const Page = () => {
     const templateId = "template_tgbw12l";
     const userId = "user_C7Rc87pDIIjtLoqaZy1uo";
 
-    const formData = new FormData();
-    formData.append("to_email", data.email);
-    formData.append("subject", "application for bayelsa dream queen");
-    formData.append("message", data.whydoyouwanttobethenextBDQ);
+    // const formData = new FormData();
+    // formData.append("to_email", data.email);
+    // formData.append("subject", "application for bayelsa dream queen");
+    // formData.append("message", data.whydoyouwanttobethenextBDQ);
 
-    images.forEach((image, index) => {
-      formData.append(`image${index + 1}`, image);
-    });
+    // images.forEach((image, index) => {
+    //   formData.append(`image${index + 1}`, image);
+    // });
 
     emailjs
       .send(serviceId, templateId, templateParams, userId)
       .then((response) => {
         console.log("Email sent:", response);
+        // handleShow();
+        // setTimeout(handleShow, 5000);
       })
       .catch((error) => {
         alert("something went wrong");
@@ -121,7 +123,7 @@ const Page = () => {
 
     onSuccess: () => {
       handleSubmit();
-      handleShow(true);
+      handleShow();
     },
 
     onClose: () => alert("Wait! You need this"),
@@ -265,19 +267,6 @@ const Page = () => {
         </div>
       );
       break;
-    case 3:
-      multiform = (
-        <div>
-          <p> Upload 2 pictures(full shot & head shot) </p>{" "}
-          <input
-            type="file"
-            accept="image/*"
-            multiple
-            onChange={handleFileChange}
-          />
-        </div>
-      );
-      break;
   }
 
   return (
@@ -290,7 +279,7 @@ const Page = () => {
             </button>{" "}
           </div>{" "}
           <div className="mx-auto">
-            <Image src={logo} className="mr-[52px]" />
+            <Image src={logo} className="mr-[52px]" alt="img" />
           </div>{" "}
         </div>{" "}
         <div>
@@ -308,23 +297,23 @@ const Page = () => {
           <p className=" text-xl font-medium"> Personal Information </p>{" "}
           {multiform}{" "}
           <div className="text-center mt-10">
-            {step !== 3 && (
+            {step !== 2 && (
               <button
                 className=" py-3 px-10 bg-[#290604] text-white rounded-md"
                 onClick={() =>
-                  step === 3 ? alert("no more page") : setstep(step + 1)
+                  step === 2 ? alert("no more page") : setstep(step + 1)
                 }
               >
                 Next{" "}
               </button>
             )}
-            {step === 3 && (
+            {step === 2 && (
               <PaystackButton
                 className=" py-3 px-10 bg-[#290604] text-white rounded-md"
                 {...componentProps}
               />
             )}
-            {/* <button onClick={handleSubmit}>send</button> */}
+            {/* <button onClick={handleShow}>send</button> */}
           </div>{" "}
         </div>{" "}
       </div>{" "}
@@ -332,7 +321,7 @@ const Page = () => {
         <Modal.Header closeButton></Modal.Header>
         <div className="p-4">
           <div>
-            <Image src={success} />
+            <Image src={success} alt="img" />
           </div>
           <h4 className="text-center text-3xl font-bold font-primary">
             You have successfully completed your registration.

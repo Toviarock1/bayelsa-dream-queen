@@ -68,13 +68,15 @@ export default function Home() {
             <Card image={image6} text={"Fashion Shows"} alt={"Fashion Shows"} />
           </div>
           <div className="text-center mt-5">
-            <button className="bg-[#BF9B30] text-white text-center py-3 px-10 rounded-full">
-              Know more
-            </button>
+            <a href="/about" className="text-white no-underline w-full">
+              <button className="bg-[#BF9B30] text-white text-center py-3 px-10 rounded-full">
+                Know more
+              </button>
+            </a>
           </div>
         </div>
       </section>
-      <section className="px-[1rem] md:px-32 bg-[#BF9B30] py-10 mt-2 md:flex justify-between">
+      <section className="px-[1rem] md:px-32 bg-[#BF9B30] py-10 mt-2 flex flex-col md:flex-row items-center gap-5  md:justify-between">
         <div>
           <Image src={partner1} alt="partner 1" />
         </div>
@@ -112,9 +114,14 @@ export default function Home() {
               to request yours.
             </p>
             <div className="flex justify-end">
-              <button className="bg-[#BF9B30] rounded-full text-white px-8 py-4 text-end">
-                Become A Contestant
-              </button>
+              <a
+                href="/register"
+                className="text-white no-underline w-full flexs"
+              >
+                <button className="bg-[#BF9B30] rounded-full text-white px-8 py-4 text-end">
+                  Become A Contestant
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -131,9 +138,14 @@ export default function Home() {
               purpose and your plans to connect with us
             </p>
             <div className="flex justify-center">
-              <button className="bg-[#BF9B30] rounded-full text-white px-8 py-4 text-end">
-                GO FOR SUBMISSION
-              </button>
+              <a
+                href="/register"
+                className="text-white no-underline w-full flexs"
+              >
+                <button className="bg-[#BF9B30] rounded-full text-white px-8 py-4 text-end">
+                  GO FOR SUBMISSION
+                </button>
+              </a>
             </div>
           </div>
         </div>

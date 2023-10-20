@@ -1,8 +1,85 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Input from "../components/Input";
 import Checkbox from "../components/Checkbox";
 
-const page = () => {
+const Page = () => {
+  const [fruits, setFruits] = useState({
+    updates: false,
+    banana: false,
+    cherry: false,
+  });
+
+  const handleCheckboxChange = (e) => {
+    const { name, checked } = e.target;
+    setFruits({
+      ...fruits,
+      [name]: checked,
+    });
+  };
+  const handleSubmit = () => {
+    // e.preventDefault();
+
+    var templateParams = {
+      email: data.email,
+      name: data.firstName + " " + data.middleName + " " + data.lastName,
+
+      firstname: data.firstName,
+
+      lastname: data.lastName,
+
+      middlename: data.middleName,
+
+      origin: data.stateOfOrigin,
+
+      dob: data.DOB,
+      age: data.age,
+
+      lga: data.LGA,
+
+      email: data.email,
+
+      number: data.number,
+
+      address: data.address,
+      occupation: data.occupation,
+
+      q1: data.haveyoucontestedinanypageant,
+
+      q2: data.whydoyouwanttobethenextBDQ,
+
+      q3: data.howdidknowaboutBDQ,
+
+      q4: data.referrerName,
+    };
+
+    // Your email service credentials
+    const serviceId = "contact_form";
+    const templateId = "template_tgbw12l";
+    const userId = "user_C7Rc87pDIIjtLoqaZy1uo";
+
+    // const formData = new FormData();
+    // formData.append("to_email", data.email);
+    // formData.append("subject", "application for bayelsa dream queen");
+    // formData.append("message", data.whydoyouwanttobethenextBDQ);
+
+    // images.forEach((image, index) => {
+    //   formData.append(`image${index + 1}`, image);
+    // });
+
+    emailjs
+      .send(serviceId, templateId, templateParams, userId)
+      .then((response) => {
+        console.log("Email sent:", response);
+        // handleShow();
+        // setTimeout(handleShow, 5000);
+      })
+      .catch((error) => {
+        alert("something went wrong");
+        console.error("Email not sent:", error);
+      });
+    // console.log(formData);
+  };
   return (
     <>
       <section className="px-[1rem] md:px-32 py-28 z-10 relative contactbg flex justify-center items-center rounded-b-3xl">
@@ -26,7 +103,11 @@ const page = () => {
         <Input placeholder={"Last Name"} />
         <Input placeholder={"Email Address"} />
         <Input placeholder={"Phone Number"} />
-        <Checkbox text={"General Updates"} />
+        <Checkbox
+          text={"General Updates"}
+          check={fruits.updates}
+          change={handleCheckboxChange}
+        />
         <Checkbox text={"Becoming a Contestant"} />
         <Checkbox text={"Volunteering"} />
         <Checkbox text={"Sponsorship"} />
@@ -36,4 +117,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

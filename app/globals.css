@@ -60,3 +60,8 @@
   background-repeat: no-repeat;
   height: 610px;
 }
+.flexs {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
