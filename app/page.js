@@ -63,7 +63,7 @@ export default function Home() {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        modules={[Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper h-[90vh]"
       >
         <SwiperSlide>
