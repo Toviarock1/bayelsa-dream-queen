@@ -102,7 +102,7 @@ const Page = () => {
   };
   // const [email, setemail] = useState("test@test.com");
 
-  const publicKey = "pk_test_19dc6fad63afb762ff99f44b74a4500a53700942";
+  const publicKey = "pk_live_f55ebd79c6d3cb550db359a1219c0b98f59fba6b";
   const amount = 1000000;
 
   let multiform = "";

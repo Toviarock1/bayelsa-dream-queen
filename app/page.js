@@ -15,11 +15,103 @@ import partner5 from "./../public/partner5.svg";
 import partner6 from "./../public/partner6.svg";
 import Card from "./components/Card";
 import FaqDropDown from "./components/FaqDropDown";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import slide1 from "./../public/bold brainy brave beautiful.svg";
+import slide2 from "./../public/car 1.svg";
+import slide3 from "./../public/Car write 1.svg";
+import slide4 from "./../public/BDQ LOGO & WRITE 1.svg";
 
 export default function Home() {
   return (
     <main>
-      <section className="px-[1rem] md:px-32 indexbg h-[900px]"></section>
+      {/* <section className="px-[1rem] md:px-32 indexbg2">
+        <h2 className=" text-lg font-medium uppercase tracking-[4px] md:tracking-[27px] text-center text-white pt-14">
+          entreprenuershipedition
+        </h2>
+        <div className="flex mt-16 ">
+          <div>
+            <Image src={slide1} />
+          </div>
+          <div>
+            <Image src={slide2} />
+          </div>
+        </div>
+        <div className="flex items-center justify-between md:block">
+          <div className="md:absolute bottom-1 left-40">
+            <Image src={slide3} className="w-[70px] md:w-[339px]" />
+          </div>
+          <div>
+            <Image
+              src={slide4}
+              className="ml-auto md:-mt-[146px] w-[70px] md:w-[258px] pb-5"
+            />
+          </div>
+        </div>
+      </section> */}
+      {/*  */}
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Pagination, Navigation]}
+        className="mySwiper h-[90vh]"
+      >
+        <SwiperSlide>
+          <section className="px-[1rem] md:px-32 indexbg2 py-10">
+            <h2 className=" text-lg font-medium uppercase tracking-[4px] md:tracking-[27px] text-center text-white pt-14">
+              entreprenuershipedition
+            </h2>
+            <div className="flex mt-16 ">
+              <div>
+                <Image src={slide1} />
+              </div>
+              <div>
+                <Image src={slide2} />
+              </div>
+            </div>
+            <div className="flex items-center justify-between md:block">
+              <div className="md:absolute bottom-1 left-40">
+                <Image src={slide3} className="w-[70px] md:w-[339px]" />
+              </div>
+              <div>
+                <Image
+                  src={slide4}
+                  className="ml-auto md:-mt-[146px] w-[70px] md:w-[138px] pb-5"
+                />
+              </div>
+            </div>
+          </section>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <a href="#">
+            <div className="bg-2"></div>
+          </a>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <a href="#">
+            <div className="bg-3"></div>
+          </a>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <a href="#">
+            <div className="bg-4"></div>
+          </a>
+        </SwiperSlide>
+      </Swiper>
+      {/*  */}
       <section className="px-[1rem] md:px-32 py-28 bg-[#290604] z-10 relative">
         <div className="md:flex justify-center items-center">
           <div className="md:w-1/2">
@@ -33,7 +125,7 @@ export default function Home() {
               towards society, we believe in uplifting and giving a voice to
               those who have the courage to stand out.
             </p>
-            <button className="bg-black rounded-full text-white px-8 py-4">
+            <button className="bg-white rounded-full text-black px-8 py-4">
               Learn more
             </button>
           </div>
@@ -76,26 +168,43 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="px-[1rem] md:px-32 bg-[#BF9B30] py-10 mt-2 flex flex-col md:flex-row items-center gap-5  md:justify-between">
-        <div>
-          <Image src={partner1} alt="partner 1" />
-        </div>
-        <div>
-          <Image src={partner2} alt="partner 1" />
-        </div>
-        <div>
-          <Image src={partner3} alt="partner 1" />
-        </div>
-        <div>
-          <Image src={partner4} alt="partner 1" />
-        </div>
-        <div>
-          <Image src={partner5} alt="partner 1" />
-        </div>
-        <div>
-          <Image src={partner6} alt="partner 1" />
-        </div>
-      </section>
+      {/* work on slider */}
+      <Swiper
+        // onSwiper={setSwiperRef}
+        slidesPerView={3}
+        centeredSlides={true}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation, Autoplay]}
+        className="mySwiper mt-6 bg-[#BF9B30] py-3"
+      >
+        <SwiperSlide>
+          <Image src={partner1} alt="partner 1" className="mx-auto py-3" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={partner2} alt="partner 1" className="mx-auto py-3" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={partner3} alt="partner 1" className="mx-auto py-3" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={partner4} alt="partner 1" className="mx-auto py-3" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={partner5} alt="partner 1" className="mx-auto py-3" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={partner6} alt="partner 1" className="mx-auto py-3" />
+        </SwiperSlide>
+      </Swiper>
+
       <section className="px-[1rem] md:px-32 py-28 bg -mt-[184px] z-10 relative mt-2">
         <div className="flex flex-col flex-col-reverse gap-2 md:flex-row justify-center items-center mt-20">
           <div className="md:w-1/2">

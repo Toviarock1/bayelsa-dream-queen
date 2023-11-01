@@ -16,49 +16,52 @@ const about = () => {
       </section>
       <section className="px-[1rem] md:px-32 py-28 z-10 relative">
         <div className="md:flex justify-center items-center">
-          <div className="md:w-1/2 text-black pr-8">
+          <div className="md:w-2/3 text-black pr-8">
             <h2 className="text-black font-secondary text-6xl font-bold mb-6">
               Preamble
             </h2>
             <p className="font-primary text-xl font-light mb-5 text-black">
-              THE NIGERIAN QUEEN (beauty for purpose) beauty pageant is a brand
-              from 001 Entertainment outfit, targeted at redefining beauty with
-              a connotation of purpose, and with a sole aim of carrying out
-              humanitarian activities.
+              <b>
+                BAYELSA DREAM QUEEN (beauty that inspires), is an unprecedented
+                Peace and Cultural beauty pageant brand which is a Brainchild of
+                Caryn International Production. The sole aim is targeted at
+                redefining pageantry beyond humanitarianism
+              </b>
+              . This beauty pageant seeks to inspire this generation by
+              identifying and bringing solutions to pressing issues in the State
+              and Niger Delta Region at large, the appreciation of social
+              development and how the their individual input can challenge the
+              status quo and contribute positively to the Nation’s growing
+              profile.
             </p>
             <p className="font-primary text-xl font-light mb-5 text-black">
-              Our Pedigree for The Nigerian Queen pageant is a search of rare
+              BDQ is practically task to produce the most stylish, bold, brainy,
+              brave and beautiful Bayelsa maidens who possess revolutionary and
+              realistic ideas to be implemented towards the progressive
+              advancement of Bayelsa and the Niger Delta Region. Simply; it’s
+              developed as a most anticipate contest where participants would
+              always be required to exhibite beside physical beauty,
+              intellectual capability, especially in the area of development:
+              social and economic.
+            </p>
+            <p className="font-primary text-xl font-light mb-5 text-black">
+              Bayelsa Dream Queen is a healthy competitive unique brand. It is a
+              creative innovation to step up beauty pageants, a concept that
+              brings attraction and encourages and gives platforms that helps
+              young girls find their true essence. It is a search of rare
               combination of beauty and brains. Impeccable young ladies that
-              would uphold strong values, beauty, intellects and prestige. The
-              Nigerian Queen (beauty for purpose) is a prestigious Crown that
-              goes beyond physical beauty, the organization aim at helping young
-              girls find their true essence. We search for women that have a big
-              heart towards society, we believe in uplifting and giving a voice
-              to those who have the courage to stand out.
+              would uphold strong values, beauty, intellects and prestige. We
+              search for women that have a big heart towards society, we believe
+              in uplifting and giving a voice to those who have the courage to
+              stand out.
             </p>
             <p className="font-primary text-xl font-light mb-5 text-black">
-              This platform is all about Impact, not just a beautiful girl with
-              a designer gown and a crown, But a girl that can create long
-              lasting Impact and change the world in her own little way. A
-              platform that develop potentials and talents, using pageantry as a
-              tool for promoting peace, progress and youth development.
+              A platform that develop potentials and talents, using pageantry as
+              a tool for promoting peace, progress and youth development. We are
+              also intentional by using BDQ to promote and celebrate our unique
+              rich cultural heritage to every part of Nigeria, Africa and the
+              entire world at large.
             </p>
-            <p className="font-primary text-xl font-light mb-5 text-black">
-              This platform is all about Impact, not just a beautiful girl with
-              a designer gown and a crown, But a girl that can create long
-              lasting Impact and change the world in her own little way. A
-              platform that develop potentials and talents, using pageantry as a
-              tool for promoting peace, progress and youth development.
-            </p>
-            <p className="font-primary text-xl font-light mb-5 text-black">
-              We believe that change will come if we all command it from our own
-              little corner; our pageantry platform also helps to project and
-              celebrate our unique rich cultural heritage to every part of
-              Africa and the entire world at large.
-            </p>
-          </div>
-          <div className="md:w-1/2 flex justify-center">
-            <Image src={herobg} alt="img" />
           </div>
         </div>
       </section>

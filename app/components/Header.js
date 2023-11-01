@@ -14,7 +14,10 @@ const Header = () => {
         <Navbar.Brand href="#home">
           <Image src={logo} alt="bayelsa dream queen event logo" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          className="white"
+        />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto">
             <Nav.Link href="/" className="text-white poppins">

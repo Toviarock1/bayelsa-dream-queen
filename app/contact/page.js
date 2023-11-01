@@ -103,7 +103,17 @@ const Page = () => {
         <Input placeholder={"Last Name"} />
         <Input placeholder={"Email Address"} />
         <Input placeholder={"Phone Number"} />
-        <Checkbox
+        <div className="text-center mt-10">
+          <button
+            className=" py-3 px-10 bg-[#290604] text-white rounded-md"
+            onClick={() =>
+              step === 2 ? alert("no more page") : setstep(step + 1)
+            }
+          >
+            Send{" "}
+          </button>
+        </div>{" "}
+        {/* <Checkbox
           text={"General Updates"}
           check={fruits.updates}
           change={handleCheckboxChange}
@@ -111,7 +121,7 @@ const Page = () => {
         <Checkbox text={"Becoming a Contestant"} />
         <Checkbox text={"Volunteering"} />
         <Checkbox text={"Sponsorship"} />
-        <Checkbox text={"I would like to receive email communications."} />
+        <Checkbox text={"I would like to receive email communications."} /> */}
       </section>
     </>
   );
