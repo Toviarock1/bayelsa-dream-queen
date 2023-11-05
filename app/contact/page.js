@@ -2,55 +2,33 @@
 import React, { useState } from "react";
 import Input from "../components/Input";
 import Checkbox from "../components/Checkbox";
+import emailjs from "@emailjs/browser";
 
 const Page = () => {
-  const [fruits, setFruits] = useState({
-    updates: false,
-    banana: false,
-    cherry: false,
+  const [data, setData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
   });
 
-  const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
-    setFruits({
-      ...fruits,
-      [name]: checked,
-    });
-  };
+  // const handleCheckboxChange = (e) => {
+  //   const { name, checked } = e.target;
+  //   setFruits({
+  //     ...fruits,
+  //     [name]: checked,
+  //   });
+  // };
   const handleSubmit = () => {
     // e.preventDefault();
 
     var templateParams = {
       email: data.email,
       name: data.firstName + " " + data.middleName + " " + data.lastName,
-
       firstname: data.firstName,
-
       lastname: data.lastName,
-
-      middlename: data.middleName,
-
-      origin: data.stateOfOrigin,
-
-      dob: data.DOB,
-      age: data.age,
-
-      lga: data.LGA,
-
       email: data.email,
-
       number: data.number,
-
-      address: data.address,
-      occupation: data.occupation,
-
-      q1: data.haveyoucontestedinanypageant,
-
-      q2: data.whydoyouwanttobethenextBDQ,
-
-      q3: data.howdidknowaboutBDQ,
-
-      q4: data.referrerName,
     };
 
     // Your email service credentials
@@ -70,6 +48,7 @@ const Page = () => {
     emailjs
       .send(serviceId, templateId, templateParams, userId)
       .then((response) => {
+        alert("thanks for signin up for our newsletter");
         console.log("Email sent:", response);
         // handleShow();
         // setTimeout(handleShow, 5000);
@@ -99,16 +78,26 @@ const Page = () => {
         <p className="text-center text-black font-primary text-2xl font-normal">
           Sign up below for the latest news on The Nigerian Queen
         </p>
-        <Input placeholder={"First Name"} />
-        <Input placeholder={"Last Name"} />
-        <Input placeholder={"Email Address"} />
-        <Input placeholder={"Phone Number"} />
+        <Input
+          placeholder={"First Name"}
+          change={(e) => setData({ ...data, firstName: e.target.value })}
+        />
+        <Input
+          placeholder={"Last Name"}
+          change={(e) => setData({ ...data, lastName: e.target.value })}
+        />
+        <Input
+          placeholder={"Email Address"}
+          change={(e) => setData({ ...data, email: e.target.value })}
+        />
+        <Input
+          placeholder={"Phone Number"}
+          change={(e) => setData({ ...data, phone: e.target.value })}
+        />
         <div className="text-center mt-10">
           <button
             className=" py-3 px-10 bg-[#290604] text-white rounded-md"
-            onClick={() =>
-              step === 2 ? alert("no more page") : setstep(step + 1)
-            }
+            onClick={handleSubmit}
           >
             Send{" "}
           </button>

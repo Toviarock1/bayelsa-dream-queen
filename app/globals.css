@@ -108,3 +108,18 @@
 .white {
   background: white !important;
 }
+
+.hero2 {
+  background: linear-gradient(247deg, #3f0037 0%, #7b0249 164.97%);
+}
+.e {
+  border: 2px solid #cc3467 !important;
+}
+.slide {
+  background-image: url("./../public/back1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  /* background: linear-gradient(247deg, #3f0037 0%, #7b0249 164.97%); */
+}

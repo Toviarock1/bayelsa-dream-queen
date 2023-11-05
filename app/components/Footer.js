@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
         <div className="flex justify-center text-white mt-2">
           <ul className="md:flex gap-3">
-            <li className="text-center">+1 (623) 800‑5437</li>
+            <li className="text-center">+(234) 8139933334</li>
             <li>Contact@BayelsaDreamQueen.com</li>
           </ul>
         </div>
