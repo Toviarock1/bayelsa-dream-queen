@@ -74,9 +74,9 @@ const Page = () => {
     };
 
     // Your email service credentials
-    const serviceId = "contact_form";
-    const templateId = "template_tgbw12l";
-    const userId = "user_C7Rc87pDIIjtLoqaZy1uo";
+    const serviceId = "service_gdionta";
+    const templateId = "template_s3bixhq";
+    const userId = "WcsB1kOfo_U6u7sEW";
 
     // const formData = new FormData();
     // formData.append("to_email", data.email);
